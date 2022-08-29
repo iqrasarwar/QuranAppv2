@@ -13,7 +13,8 @@ public class Ayat {
     String rakuId;
     String pRakuId;
 
-    public Ayat(String ayatId, String suratId, String ayatNumber, String arabicText, String urduFateh, String urduMehmood, String englishMohsin, String taqiUsmani, String parahId, String rakuId, String pRakuId) {
+    public Ayat(String ayatId, String suratId, String ayatNumber, String arabicText,
+                String urduFateh, String urduMehmood, String englishMohsin, String taqiUsmani,  String rakuId, String pRakuId,String parahId) {
         this.ayatId = ayatId;
         this.suratId = suratId;
         this.ayatNumber = ayatNumber;

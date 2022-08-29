@@ -1,6 +1,7 @@
 package com.example.quranappv2;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,14 @@ public class AyatCustomListConfig extends ArrayAdapter<Ayat> {
         TextView translation = convertView.findViewById(R.id.textView5);
         arabic.setText(s.getArabicText());
         translation.setText(s.getUrduFateh());
+        Typeface typeface = Typeface.createFromAsset(
+                getContext().getAssets(),
+                "noorehuda.ttf");
+        Typeface urduface = Typeface.createFromAsset(
+                getContext().getAssets(),
+                "Jameel Noori Nastaleeq.ttf");
+        arabic.setTypeface(typeface);
+        translation.setTypeface(urduface);
         return convertView;
     }
 }

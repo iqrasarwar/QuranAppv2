@@ -3,41 +3,39 @@ package com.example.quranappv2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class SurahContext extends AppCompatActivity {
+public class ParaContext extends AppCompatActivity {
     Store store;
     DataBaseHelper db;
     ListView l;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_surah_context);
+        setContentView(R.layout.activity_para_context);
         store = new Store();
         l = findViewById(R.id.listview);
-        db = new DataBaseHelper(SurahContext.this);
+        db = new DataBaseHelper(ParaContext.this);
         ArrayList<Ayat> ayat = db.getAyat();
-        ArrayList<Ayat> thisSurahAyat = new ArrayList<>();
+        ArrayList<Ayat> thisParaAyat = new ArrayList<>();
         Intent i = getIntent();
         if(i.getExtras() != null) {
             int index = Integer.parseInt(i.getStringExtra("index"));
             index++;
-            if(index > 1)
-                thisSurahAyat.add(ayat.get(0));
+            if(index > 0)
+                thisParaAyat.add(ayat.get(0));
             for (int ind = 0; ind < ayat.size(); ind++) {
-                String id = ayat.get(ind).getSuratId();
+                String id = ayat.get(ind).getParahId();
                 int idi = Integer.parseInt(id);
                 if (idi == index) {
-                    thisSurahAyat.add(ayat.get(ind));
+                    thisParaAyat.add(ayat.get(ind));
                 }
             }
         }
-        AyatCustomListConfig list = new AyatCustomListConfig(this, 0, thisSurahAyat);
+        AyatCustomListConfig list = new AyatCustomListConfig(this, 0, thisParaAyat);
         l.setAdapter(list);
     }
 }

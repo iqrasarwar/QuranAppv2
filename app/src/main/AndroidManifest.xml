@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranAppv2">
         <activity
+            android:name=".ParaContext"
+            android:exported="false" />
+        <activity
             android:name=".SurahContext"
             android:exported="false" />
         <activity
