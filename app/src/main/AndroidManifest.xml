@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranAppv2">
         <activity
+            android:name=".SurahContext"
+            android:exported="false" />
+        <activity
+            android:name=".AllParahs"
+            android:exported="false" />
+        <activity
+            android:name=".AllSurahs"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/activity_all_parahs.xml" value="0.12952898550724637" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/activity_all_surahs.xml" value="0.12952898550724637" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/activity_surah_context.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/surah_item.xml" value="0.33" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppv2/app/src/main/res/layout/translated_ayat.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

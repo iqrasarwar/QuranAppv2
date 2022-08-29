@@ -134,12 +134,35 @@ class DataBaseHelper extends SQLiteOpenHelper {
         if (c.moveToFirst()) {
             do {
                 String id = Integer.toString(c.getInt(0));
-                surahs.add(new Surah(id,c.getString(1),c.getString(1),c.getString(2),
-                        c.getString(3)));
+                surahs.add(new Surah(id,c.getString(1),c.getString(2),c.getString(3),
+                        c.getString(4)));
             } while (c.moveToNext());
         }
         c.close();
         return surahs;
+    }
+
+    public ArrayList<Ayat> getAyat()
+    {
+        SQLiteDatabase sqdb = this.getReadableDatabase();
+        ArrayList<Ayat> ayat = new ArrayList<>();
+        Cursor c = sqdb.rawQuery("select * from tayah",null);
+        if (c.moveToFirst()) {
+            do {
+                String ayatId = Integer.toString(c.getInt(0));
+                String surahId = Integer.toString(c.getInt(1));
+                String ayatNo = Integer.toString(c.getInt(2));
+                String rakuId = Integer.toString(c.getInt(8));
+                String prakuId = Integer.toString(c.getInt(9));
+                String paraId = Integer.toString(c.getInt(10));
+
+                ayat.add(new Ayat(ayatId,surahId,ayatNo,c.getString(3),c.getString(4),
+                        c.getString(5),
+                        c.getString(6),c.getString(7),rakuId,prakuId,paraId));
+            } while (c.moveToNext());
+        }
+        c.close();
+        return ayat;
     }
 
 
