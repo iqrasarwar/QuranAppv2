@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranAppv2">
         <activity
+            android:name=".navigation_drawer"
+            android:exported="false"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.QuranAppv2.NoActionBar" />
+        <activity
             android:name=".ParaContext"
             android:exported="false" />
         <activity
